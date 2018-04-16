@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class SecLevelBean implements Serializable{
 
 	/**
-	 * 
+	 * aa
 	 */
 	private static final long serialVersionUID = 2416621246800815445L;
 	private String year;
