@@ -151,6 +151,10 @@ public class MainWin extends JFrame {
 					JOptionPane.showMessageDialog(null, "端口格式不正确！", "错误", JOptionPane.ERROR_MESSAGE);
 					return;
 				}
+				lbForwardIP.setEnabled(false);
+				tfForwardIP.setEnabled(false);
+				lbForwardPort.setEnabled(false);
+				tfForwardPort.setEnabled(false);
 				btnStartForward.setEnabled(false);
 				btnStopForward.setEnabled(true);
 				ForwardManager.getInstance().start(ip, Integer.valueOf(port));
@@ -160,6 +164,10 @@ public class MainWin extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				lbForwardIP.setEnabled(true);
+				tfForwardIP.setEnabled(true);
+				lbForwardPort.setEnabled(true);
+				tfForwardPort.setEnabled(true);
 				btnStartForward.setEnabled(true);
 				btnStopForward.setEnabled(false);
 				ForwardManager.getInstance().stop();
